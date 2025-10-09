@@ -29,5 +29,4 @@ public class conversaoTipos {     //byte,short,int,long,float,double
         Long a = 10L;
         long b = a;
     }
-
 }
