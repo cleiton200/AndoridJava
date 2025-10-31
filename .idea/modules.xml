@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AndoridJava.iml" filepath="$PROJECT_DIR$/.idea/AndoridJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/secao11/secao11.iml" filepath="$PROJECT_DIR$/secao11/secao11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/secao12/secao12.iml" filepath="$PROJECT_DIR$/secao12/secao12.iml" />
       <module fileurl="file://$PROJECT_DIR$/secao5/secao5.iml" filepath="$PROJECT_DIR$/secao5/secao5.iml" />
       <module fileurl="file://$PROJECT_DIR$/secao6/secao6.iml" filepath="$PROJECT_DIR$/secao6/secao6.iml" />
       <module fileurl="file://$PROJECT_DIR$/secao7/secao7.iml" filepath="$PROJECT_DIR$/secao7/secao7.iml" />
