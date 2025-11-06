@@ -1,9 +1,7 @@
+import com.sun.tools.javac.Main;
+
 public class main {
     public static void main(String[] args) {
-
-        //Molde- instancia - objeto
-        Pessoa pessoa = new Pessoa();
-
-
+        Prioridade priori = Prioridade.Baixa;
     }
 }
