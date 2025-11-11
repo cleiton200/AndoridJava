@@ -1,17 +1,17 @@
 package eletreonico;
 
 public class Eletronico {
-    String cor;
-    String marca;
-    float preco;
+    protected String cor;
+    protected String marca;
+    protected float preco;
     protected boolean energia;
 
 
-    public void ligar(){
+    public void ligar() {
         energia = true;
     }
 
-    public void desligar(){
+    public void desligar() {
 
     }
 
