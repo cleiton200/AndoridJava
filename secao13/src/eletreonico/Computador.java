@@ -11,10 +11,7 @@ public class Computador implements Eletronico {
         System.out.println("Carregar SO");
     }
 
-     @Override
-     public void desligar() {
 
-     }
 
      public void instalarSoftware() {
 

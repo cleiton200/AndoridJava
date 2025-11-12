@@ -4,9 +4,9 @@ public interface Eletronico {
 
 
 
-    void ligar();
+    void ligar(float volts,float corrente);
 
-    void desligar();
+    // void desligar();
 
 
 }
