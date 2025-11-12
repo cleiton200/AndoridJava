@@ -1,19 +1,22 @@
 package eletreonico;
 
-public class Computador extends Eletronico {
+public class Computador implements Eletronico {
 
     //carregar os drives
     //carregar o SO
 
     @Override
-    public void ligar(){
-        super.ligar();
+    public void ligar() {
         System.out.println("Carregar drivers");
         System.out.println("Carregar SO");
     }
 
-   public void instalarSoftware(){
-       super.ligar();
-       super.desligar();
-   }
+     @Override
+     public void desligar() {
+
+     }
+
+     public void instalarSoftware() {
+
+    }
 }

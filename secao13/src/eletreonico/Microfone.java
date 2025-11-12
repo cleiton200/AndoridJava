@@ -1,5 +1,14 @@
 package eletreonico;
 
-public class Microfone extends Eletronico {
+public class Microfone implements Eletronico {
 
+    @Override
+    public void ligar() {
+        System.out.println("Ajusta os decibeis");
+    }
+
+    @Override
+    public void desligar() {
+
+    }
 }
