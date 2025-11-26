@@ -1,37 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Main {
-
-    private static void handleObject(List<Integer> list){
-        for (Object o : list){
-//            if(o instanceof Integer){
-//                System.out.println("Integer");
-//            }else if (o instanceof String){
-//                System.out.println("String");
-//            }else if (o instanceof  Double){
-//                System.out.println("Double");
-//            }
-
-            System.out.println(o.getClass().getSimpleName());
-        }
-    }
-
-
-
     public static void main(String[] args) {
-
-        int [] array = new int[10];
-
-        List<Integer> list = new ArrayList<>();
-
-        list.add(15);
-        list.add(18);
-        list.add(30);
+        Map<String, String> map = new HashMap<>();
 
 
-        handleObject(list);
+        map.put("franca", "parisS");
+        map.put("franca", "paris");
+        map.put("alemanha", "berlim");
 
+        System.out.println(map.keySet());
+        System.out.println(map.values());
+
+        System.out.println(map.get("franca"));
+
+        map.containsKey("alemanha");
+        map.clear();
+
+
+        map.remove("alemanha");
     }
 }
