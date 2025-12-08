@@ -4,5 +4,7 @@ public class Main {
         //Exercicio: Imprime o total de vendas por vendedor
         //Exercicio: Imprime o total de vendas por categoria
 
+        leituraDeDados.readSales();
+
     }
 }
