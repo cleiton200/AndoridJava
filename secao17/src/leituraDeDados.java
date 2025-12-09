@@ -1,15 +1,22 @@
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class leituraDeDados {
 
-    public static void readSales() {
+    public static List<Sale> readSales() {
 
+        List<Sale> saleList = new ArrayList<>();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
         //Este try/catch é colocado para tratar exececao onde CASO A LINHA NÃO POSSUA DADOS
+
         try {
 
             //usadao para ler o documento de texto
@@ -36,14 +43,20 @@ public class leituraDeDados {
                 String category = data[4];
                 Double price = Double.parseDouble(data[5]);
 
-                new Sale(id, date, seller, product, category, price);
+                saleList.add(new Sale(id, date, seller, product, category, price));
 
                 line = br.readLine();
             } while (line != null);
 
-        } catch (Exception e) {
-
+        } catch (FileNotFoundException e) {
+            System.out.println("Arquivo não encontrado");
+        } catch (IOException e) {
+            System.out.println("Problema ao ler o arquivo");;
+        } catch (ParseException e) {
+            System.out.println("Erro ao converter data");;
         }
+
+        return saleList;
     }
 
 }
