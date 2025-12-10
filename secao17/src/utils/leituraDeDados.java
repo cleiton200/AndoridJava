@@ -1,3 +1,7 @@
+package utils;
+
+import model.SaleModel;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,18 +14,17 @@ import java.util.List;
 
 public class leituraDeDados {
 
-    public static List<Sale> readSales() {
+    public static List<SaleModel> readSales(String path) {
 
-        List<Sale> saleList = new ArrayList<>();
+        List<SaleModel> saleList = new ArrayList<>();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-
         //Este try/catch é colocado para tratar exececao onde CASO A LINHA NÃO POSSUA DADOS
 
         try {
 
             //usadao para ler o documento de texto
             //BufferedReader = função pre-existente que le o arquivo
-            BufferedReader br = new BufferedReader(new FileReader("secao17/src/dados/data"));
+            BufferedReader br = new BufferedReader(new FileReader(path));
 
             //responsavel por ler a primeira linha que é o cabeçalho
             br.readLine();
@@ -43,7 +46,7 @@ public class leituraDeDados {
                 String category = data[4];
                 Double price = Double.parseDouble(data[5]);
 
-                saleList.add(new Sale(id, date, seller, product, category, price));
+                saleList.add(new SaleModel(id, date, seller, product, category, price));
 
                 line = br.readLine();
             } while (line != null);
